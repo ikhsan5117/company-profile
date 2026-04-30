@@ -1,12 +1,363 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ikhsan — Full Stack Developer</title>
+  <meta name="description" content="Portfolio website Ikhsan — Full Stack Developer yang berpengalaman dalam membangun aplikasi web modern dan sistem enterprise." />
+  <meta property="og:title" content="Ikhsan — Full Stack Developer" />
+  <meta property="og:description" content="Portfolio & Profile Website" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Welcome tu our company</h1>
-    <p>Our company specializes in providing tech solutions.</p>
+
+<canvas id="particles-canvas"></canvas>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="#hero" class="nav-logo">IKH<span style="color:#a855f7">SAN</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about" id="nav-about">About</a></li>
+    <li><a href="#skills" id="nav-skills">Skills</a></li>
+    <li><a href="#portfolio" id="nav-portfolio">Portfolio</a></li>
+    <li><a href="#experience" id="nav-exp">Experience</a></li>
+    <li><a href="#contact" id="nav-contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" aria-label="Toggle Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-photo-wrapper">
+      <img src="assets/profile-photo.png" alt="Foto Profil Ikhsan" class="hero-photo" id="hero-photo" />
+    </div>
+    <p class="hero-greeting">👋 Halo, Saya</p>
+    <h1 class="hero-name">Ikhsan</h1>
+    <p class="hero-tagline">
+      Full Stack Developer &amp; System Builder — membangun solusi digital inovatif dengan teknologi modern untuk masa depan.
+    </p>
+    <div class="hero-cta">
+      <a href="#portfolio" class="btn btn-primary" id="btn-portfolio">Lihat Portofolio</a>
+      <a href="#contact" class="btn btn-outline" id="btn-contact">Hubungi Saya</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="position:relative;z-index:1;background: url('assets/about-bg.png') center/cover no-repeat; background-attachment:fixed;">
+  <div style="background: linear-gradient(0deg, var(--bg-dark) 0%, rgba(10,10,26,0.85) 50%, var(--bg-dark) 100%);">
+    <div class="section">
+      <div class="section-header reveal">
+        <p class="section-label">// 01. Tentang Saya</p>
+        <h2 class="section-title">Siapa <span style="color:var(--primary)">Saya?</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrapper reveal">
+          <img src="assets/profile-photo.png" alt="Ikhsan - Full Stack Developer" class="about-image" />
+        </div>
+        <div class="about-text reveal">
+          <h3>Full Stack Developer 🚀</h3>
+          <p>
+            Saya adalah seorang developer yang passionate dalam membangun aplikasi web dan sistem enterprise yang powerful. Dengan pengalaman di berbagai teknologi modern, saya selalu berusaha menghadirkan solusi terbaik untuk setiap tantangan.
+          </p>
+          <p>
+            Keahlian saya mencakup pengembangan frontend yang responsif hingga backend yang robust, termasuk integrasi database dan deployment ke environment produksi. Saya juga berpengalaman dalam membangun sistem manufaktur dan ERP.
+          </p>
+          <p>
+            Di luar coding, saya menyukai alam dan fotografi — inspirasi yang sering membawa perspektif segar ke dalam desain dan solusi teknis yang saya kerjakan.
+          </p>
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-number">3+</div>
+              <div class="stat-label">Tahun Pengalaman</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">20+</div>
+              <div class="stat-label">Proyek Selesai</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Klien Puas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section">
+    <div class="section-header reveal">
+      <p class="section-label">// 02. Keahlian</p>
+      <h2 class="section-title">Tech <span style="color:var(--primary)">Stack</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-icon">🌐</div>
+        <h3>Frontend Development</h3>
+        <p>Membangun UI/UX yang responsif, modern, dan interaktif dengan performa tinggi.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Razor Views</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">⚙️</div>
+        <h3>Backend Development</h3>
+        <p>Merancang arsitektur server-side yang scalable dan API yang efisien.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">ASP.NET Core</span>
+          <span class="skill-tag">C#</span>
+          <span class="skill-tag">Entity Framework</span>
+          <span class="skill-tag">REST API</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🗄️</div>
+        <h3>Database & Cloud</h3>
+        <p>Mengelola dan mengoptimasi database relasional untuk kebutuhan enterprise.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">SQL Server</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">LINQ</span>
+          <span class="skill-tag">IIS Deploy</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🏭</div>
+        <h3>Enterprise Systems</h3>
+        <p>Membangun sistem produksi, ERP, dan dashboard monitoring untuk industri manufaktur.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">MES</span>
+          <span class="skill-tag">SPS System</span>
+          <span class="skill-tag">Reporting</span>
+          <span class="skill-tag">Dashboard</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🎨</div>
+        <h3>UI/UX Design</h3>
+        <p>Merancang antarmuka yang intuitif dengan estetika modern dan user-centered design.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">Glassmorphism</span>
+          <span class="skill-tag">Dark Mode</span>
+          <span class="skill-tag">Responsive</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🔧</div>
+        <h3>Tools & DevOps</h3>
+        <p>Menguasai berbagai tools pengembangan dan workflow deployment modern.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">Visual Studio</span>
+          <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">PowerShell</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" style="position:relative;z-index:1;background: linear-gradient(180deg, var(--bg-dark) 0%, #0d0d20 50%, var(--bg-dark) 100%);">
+  <div class="section">
+    <div class="section-header reveal">
+      <p class="section-label">// 03. Portofolio</p>
+      <h2 class="section-title">Proyek <span style="color:var(--primary)">Unggulan</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card reveal">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #0d1b2a 0%, #1b2838 100%);">
+          <div class="portfolio-thumb-overlay"></div>
+          <div class="portfolio-thumb-icon">🏭</div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Velasto Production System</h3>
+          <p>Sistem monitoring produksi manufaktur real-time dengan input dimensi, laporan SPS, dan integrasi Bluetooth alat ukur.</p>
+          <div class="portfolio-tech">
+            <span>ASP.NET Core</span><span>SQL Server</span><span>C#</span><span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #1a0d2e 0%, #2d1b4e 100%);">
+          <div class="portfolio-thumb-overlay"></div>
+          <div class="portfolio-thumb-icon">📊</div>
+        </div>
+        <div class="portfolio-info">
+          <h3>SPS Master Dashboard</h3>
+          <p>Dashboard interaktif untuk manajemen SPS Masterlist dengan fitur pencarian real-time, filter multi-kategori, dan export laporan.</p>
+          <div class="portfolio-tech">
+            <span>Razor Pages</span><span>Entity Framework</span><span>IIS</span>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #0d2a1b 0%, #1b4e2d 100%);">
+          <div class="portfolio-thumb-overlay"></div>
+          <div class="portfolio-thumb-icon">📱</div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Tablet Production HUD</h3>
+          <p>Interface produksi berbasis tablet dengan layout A4, auto-save localStorage, dan validasi parameter dimensi secara real-time.</p>
+          <div class="portfolio-tech">
+            <span>Responsive UI</span><span>LocalStorage</span><span>CSS3</span>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #2a1a0d 0%, #4e2d1b 100%);">
+          <div class="portfolio-thumb-overlay"></div>
+          <div class="portfolio-thumb-icon">🔧</div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Enterprise ERP Module</h3>
+          <p>Modul ERP terintegrasi untuk manajemen data produksi, shift, dan perencanaan dengan sinkronisasi multi-user.</p>
+          <div class="portfolio-tech">
+            <span>ASP.NET MVC</span><span>LINQ</span><span>SQL Server</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section">
+    <div class="section-header reveal">
+      <p class="section-label">// 04. Pengalaman</p>
+      <h2 class="section-title">Perjalanan <span style="color:var(--primary)">Karier</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2024 — Sekarang</div>
+        <div class="timeline-card">
+          <h3>Full Stack Developer</h3>
+          <h4>PT. Velasto Indonesia</h4>
+          <p>Mengembangkan dan memelihara sistem produksi manufaktur berbasis ASP.NET Core. Membangun modul SPS, input dimensi, laporan produksi, dan sistem monitoring real-time yang digunakan di lantai pabrik.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2023 — 2024</div>
+        <div class="timeline-card">
+          <h3>Web Developer</h3>
+          <h4>Freelance & Project Based</h4>
+          <p>Mengerjakan berbagai proyek web development untuk klien lokal, mulai dari company profile, e-commerce sederhana, hingga sistem manajemen internal perusahaan.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2021 — 2023</div>
+        <div class="timeline-card">
+          <h3>Junior Developer & Intern</h3>
+          <h4>Belajar & Berkembang</h4>
+          <p>Memulai perjalanan di dunia programming, mempelajari dasar-dasar web development, database design, dan mulai terlibat dalam proyek-proyek kecil sambil mengembangkan portofolio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="position:relative;z-index:1;background:linear-gradient(180deg, var(--bg-dark) 0%, #0d0d20 100%);">
+  <div class="section">
+    <div class="section-header reveal">
+      <p class="section-label">// 05. Kontak</p>
+      <h2 class="section-title">Mari <span style="color:var(--primary)">Terhubung</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-info reveal">
+        <h3>Siap Berkolaborasi?</h3>
+        <p>Saya terbuka untuk peluang kerja sama, proyek baru, atau sekadar diskusi seputar teknologi. Jangan ragu untuk menghubungi saya!</p>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:ikhsan@email.com" id="link-email">
+            <div class="contact-link-icon">📧</div>
+            <div class="contact-link-text">
+              <h4>Email</h4>
+              <p>ikhsan@email.com</p>
+            </div>
+          </a>
+          <a class="contact-link" href="https://wa.me/62xxxxxxxxx" id="link-wa" target="_blank" rel="noopener">
+            <div class="contact-link-icon">💬</div>
+            <div class="contact-link-text">
+              <h4>WhatsApp</h4>
+              <p>+62 xxx-xxxx-xxxx</p>
+            </div>
+          </a>
+          <a class="contact-link" href="https://github.com/ikhsan5117" id="link-github" target="_blank" rel="noopener">
+            <div class="contact-link-icon">💻</div>
+            <div class="contact-link-text">
+              <h4>GitHub</h4>
+              <p>github.com/ikhsan5117</p>
+            </div>
+          </a>
+          <a class="contact-link" href="https://linkedin.com/in/ikhsan" id="link-linkedin" target="_blank" rel="noopener">
+            <div class="contact-link-icon">🔗</div>
+            <div class="contact-link-text">
+              <h4>LinkedIn</h4>
+              <p>linkedin.com/in/ikhsan</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form reveal">
+        <form id="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <input type="text" id="form-name" placeholder="Nama Anda" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <input type="email" id="form-email" placeholder="Email Anda" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <input type="text" id="form-subject" placeholder="Subjek" required />
+          </div>
+          <div class="form-group">
+            <textarea id="form-message" placeholder="Pesan Anda..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="btn-send" style="width:100%">
+            Kirim Pesan 🚀
+          </button>
+        </form>
+        <div id="form-success" style="display:none;text-align:center;padding:32px;">
+          <div style="font-size:3rem;margin-bottom:16px">✅</div>
+          <h3 style="font-family:var(--font-display);color:var(--primary);margin-bottom:8px">Pesan Terkirim!</h3>
+          <p style="color:var(--text-secondary)">Terima kasih! Saya akan segera merespons pesan Anda.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-socials">
+    <a href="https://github.com/ikhsan5117" id="footer-github" target="_blank" rel="noopener" title="GitHub">💻</a>
+    <a href="https://linkedin.com/in/ikhsan" id="footer-linkedin" target="_blank" rel="noopener" title="LinkedIn">🔗</a>
+    <a href="mailto:ikhsan@email.com" id="footer-email" title="Email">📧</a>
+    <a href="https://wa.me/62xxxxxxxxx" id="footer-wa" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+  </div>
+  <p>Designed & Built by <span style="color:var(--primary);font-weight:600">Ikhsan</span> · 2026</p>
+  <p style="margin-top:6px;font-size:0.72rem;">Built with ❤️ using Vanilla HTML, CSS &amp; JavaScript</p>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
