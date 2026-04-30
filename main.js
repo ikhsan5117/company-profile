@@ -152,15 +152,39 @@ window.handleSubmit = function(event) {
     const form = document.getElementById('contact-form');
     const success = document.getElementById('form-success');
     
-    btn.innerHTML = 'Mengirim... <span class="spinner"></span>';
+    const formData = new FormData(form);
+    
+    btn.innerHTML = 'Mengirim...';
     btn.disabled = true;
 
-    // Simulate API call
-    setTimeout(() => {
-        form.style.display = 'none';
-        success.style.display = 'block';
-        success.classList.add('reveal', 'active');
-    }, 1500);
+    fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            form.style.display = 'none';
+            success.style.display = 'block';
+            success.classList.add('reveal', 'active');
+            form.reset();
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    alert(data["errors"].map(error => error["message"]).join(", "));
+                } else {
+                    alert("Oops! Ada masalah saat mengirim pesan Anda.");
+                }
+                btn.innerHTML = 'Kirim Pesan 🚀';
+                btn.disabled = false;
+            });
+        }
+    }).catch(error => {
+        alert("Oops! Terjadi kesalahan koneksi.");
+        btn.innerHTML = 'Kirim Pesan 🚀';
+        btn.disabled = false;
+    });
     
     return false;
 };

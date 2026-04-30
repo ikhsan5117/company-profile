@@ -319,18 +319,18 @@
         </div>
       </div>
       <div class="contact-form reveal">
-        <form id="contact-form" onsubmit="handleSubmit(event)">
+        <form id="contact-form" action="https://formspree.io/f/mlgzrzlq" method="POST" onsubmit="handleSubmit(event)">
           <div class="form-group">
-            <input type="text" id="form-name" placeholder="Nama Anda" required autocomplete="name" />
+            <input type="text" name="name" id="form-name" placeholder="Nama Anda" required autocomplete="name" />
           </div>
           <div class="form-group">
-            <input type="email" id="form-email" placeholder="Email Anda" required autocomplete="email" />
+            <input type="email" name="email" id="form-email" placeholder="Email Anda" required autocomplete="email" />
           </div>
           <div class="form-group">
-            <input type="text" id="form-subject" placeholder="Subjek" required />
+            <input type="text" name="subject" id="form-subject" placeholder="Subjek" required />
           </div>
           <div class="form-group">
-            <textarea id="form-message" placeholder="Pesan Anda..." required></textarea>
+            <textarea name="message" id="form-message" placeholder="Pesan Anda..." required></textarea>
           </div>
           <button type="submit" class="btn btn-primary" id="btn-send" style="width:100%">
             Kirim Pesan 🚀
